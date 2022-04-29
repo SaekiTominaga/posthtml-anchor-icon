@@ -1,0 +1,51 @@
+{
+	"name": "posthtml-anchor-icon",
+	"version": "1.0.0",
+	"description": "Insert icon immediately after `<a href>` using PostHTML",
+	"keywords": [
+		"html",
+		"posthtml",
+		"posthtml-plugin"
+	],
+	"homepage": "https://github.com/SaekiTominaga/posthtml-anchor-icon#readme",
+	"bugs": {
+		"url": "https://github.com/SaekiTominaga/posthtml-anchor-icon/issues"
+	},
+	"license": "MIT",
+	"author": "Saeki Tominaga",
+	"files": [
+		"dist",
+		"src"
+	],
+	"type": "module",
+	"main": "dist/index.js",
+	"module": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/SaekiTominaga/posthtml-anchor-icon.git"
+	},
+	"scripts": {
+		"build": "tsc",
+		"watch": "tsc -w",
+		"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage"
+	},
+	"dependencies": {
+		"@saekitominaga/posthtml-match-class": "^1.0.0",
+		"posthtml": "^0.16.6"
+	},
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^5.21.0",
+		"@typescript-eslint/parser": "^5.21.0",
+		"coveralls": "^3.1.1",
+		"cross-env": "^7.0.3",
+		"eslint": "^8.14.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-jest": "^26.1.5",
+		"jest": "^28.0.2",
+		"typescript": "^4.6.4"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}
