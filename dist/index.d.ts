@@ -1,7 +1,7 @@
 import * as PostHTML from 'posthtml';
 interface Options {
     readonly class: string;
-    readonly hostInfo: {
+    readonly host_info: {
         host: string;
         site_name: string;
         icon_src: string;
