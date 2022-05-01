@@ -1,6 +1,6 @@
 {
 	"name": "posthtml-anchor-icon",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Insert icon immediately after `<a href>` using PostHTML",
 	"keywords": [
 		"html",
