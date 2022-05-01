@@ -3,13 +3,13 @@ import posthtml from 'posthtml';
 import { describe, expect, test } from '@jest/globals';
 
 describe('正常系', () => {
-	test('class, hostInfo のみ指定', async () => {
+	test('class, host_info のみ指定', async () => {
 		expect(
 			(
 				await posthtml([
 					posthtmlAnchorHost({
 						class: 'icon-anchor',
-						hostInfo: [
+						host_info: [
 							{
 								host: 'example.com',
 								site_name: 'Example com',
@@ -21,13 +21,13 @@ describe('正常系', () => {
 			).html
 		).toBe('<a href="https://example.com/">Link</a><img src="/icon/com_example.svg" alt="Example com">');
 	});
-	test('class, hostInfo のみ指定（変換対象外）', async () => {
+	test('class, host_info のみ指定（変換対象外）', async () => {
 		expect(
 			(
 				await posthtml([
 					posthtmlAnchorHost({
 						class: 'icon-anchor',
-						hostInfo: [
+						host_info: [
 							{
 								host: 'example.net',
 								site_name: 'Example net',
@@ -51,7 +51,7 @@ describe('正常系', () => {
 				await posthtml([
 					posthtmlAnchorHost({
 						class: 'icon-anchor',
-						hostInfo: [
+						host_info: [
 							{
 								host: 'example.com',
 								site_name: 'Example com',
