@@ -1,4 +1,4 @@
 language: node_js
 node_js:
-  - 16
+  - 17
 script: npm run test && coveralls < coverage/lcov.info
