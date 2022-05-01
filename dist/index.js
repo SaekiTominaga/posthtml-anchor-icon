@@ -4,7 +4,7 @@ export default (options) => {
         class: options.class,
     };
     const iconElementInfo = {
-        hostInfo: options.hostInfo,
+        host_info: options.host_info,
         class: options.icon_class,
         size: options.icon_size,
         parentheses_before: options.icon_parentheses_before ?? '',
@@ -31,7 +31,7 @@ export default (options) => {
                 console.warn(e.message, node);
                 return node;
             }
-            const hostInfo = iconElementInfo.hostInfo.find((hostInfo) => hostInfo.host === url.host);
+            const hostInfo = iconElementInfo.host_info.find((hostInfo) => hostInfo.host === url.host);
             if (hostInfo === undefined) {
                 console.warn('Undefined host name', node);
                 return node;

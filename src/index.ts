@@ -3,7 +3,7 @@ import PostHTMLMatchClass from '@saekitominaga/posthtml-match-class';
 
 interface Options {
 	readonly class: string;
-	readonly hostInfo: {
+	readonly host_info: {
 		host: string;
 		site_name: string;
 		icon_src: string;
@@ -20,7 +20,7 @@ export default (options: Options) => {
 	};
 
 	const iconElementInfo = {
-		hostInfo: options.hostInfo,
+		host_info: options.host_info,
 		class: options.icon_class,
 		size: options.icon_size,
 		parentheses_before: options.icon_parentheses_before ?? '',
@@ -52,7 +52,7 @@ export default (options: Options) => {
 				return node;
 			}
 
-			const hostInfo = iconElementInfo.hostInfo.find((hostInfo) => hostInfo.host === url.host);
+			const hostInfo = iconElementInfo.host_info.find((hostInfo) => hostInfo.host === url.host);
 			if (hostInfo === undefined) {
 				console.warn('Undefined host name', node);
 				return node;
